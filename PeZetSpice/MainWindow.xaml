@@ -6,12 +6,30 @@
         xmlns:views="clr-namespace:PeZetSpice.Views"
         xmlns:local="clr-namespace:PeZetSpice"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="Black">
+        Title="MainWindow" Height="450" Width="800" Background="Black"
+        MouseWheel="Window_MouseWheel"
+        MouseDown="Window_MouseDown"
+        MouseUp="Window_MouseUp"
+        MouseLeave="Window_MouseLeave"
+        MouseMove="Window_MouseMove">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <views:PaperView Grid.Row="1"/>
+        <Border BorderThickness="1" BorderBrush="Gray"/>
+        <Canvas x:Name="MyGrid" Grid.Row="1">
+            <views:PaperView 
+                x:Name="MainPaperView"
+                Canvas.Left="0"
+                Canvas.Top="0">
+                <!--<views:PaperView.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="100" Y="500"/>
+                        <ScaleTransform ScaleX=".25" ScaleY=".25"/>
+                    </TransformGroup>
+                </views:PaperView.RenderTransform>-->
+            </views:PaperView>
+        </Canvas>
     </Grid>
 </Window>
