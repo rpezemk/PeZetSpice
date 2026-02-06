@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeZetSpice", "PeZetSpice\Pe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpiceTest", "SpiceTest\SpiceTest.csproj", "{7B761788-8BBC-47B2-A4B2-A76A56BFFFB5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchematicSymbols", "SchematicSymbols\SchematicSymbols.csproj", "{29D2FBF1-8F6B-4438-93BB-7D7C1CC0E620}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElementaryGuiLib", "ElementaryGuiLib\ElementaryGuiLib.csproj", "{8A420200-65D7-4BA6-9783-0325E4384168}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{7B761788-8BBC-47B2-A4B2-A76A56BFFFB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B761788-8BBC-47B2-A4B2-A76A56BFFFB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B761788-8BBC-47B2-A4B2-A76A56BFFFB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29D2FBF1-8F6B-4438-93BB-7D7C1CC0E620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D2FBF1-8F6B-4438-93BB-7D7C1CC0E620}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D2FBF1-8F6B-4438-93BB-7D7C1CC0E620}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D2FBF1-8F6B-4438-93BB-7D7C1CC0E620}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A420200-65D7-4BA6-9783-0325E4384168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A420200-65D7-4BA6-9783-0325E4384168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A420200-65D7-4BA6-9783-0325E4384168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A420200-65D7-4BA6-9783-0325E4384168}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

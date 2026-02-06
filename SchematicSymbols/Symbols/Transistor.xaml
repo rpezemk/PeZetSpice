@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="SchematicSymbols.Symbols.Transistor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SchematicSymbols.Symbols"
+             mc:Ignorable="d" 
+             Width="50" Height="50" Background="White">
+    <Grid>
+        <Path Stroke="Black" StrokeThickness="1" Fill="Transparent">
+            <Path.Data>
+                <EllipseGeometry Center="25,25" RadiusX="25" RadiusY="25"/>
+            </Path.Data>
+        </Path>
+        <Path Stroke="Black" StrokeThickness="0" Fill="Black">
+            <Path.Data>
+                <RectangleGeometry Rect="15,7,7,36"/>
+            </Path.Data>
+        </Path>
+        <Path Stroke="Black" StrokeThickness="3" Fill="Black">
+            <Path.Data>
+                <LineGeometry StartPoint="0, 25" EndPoint="20, 25" />
+            </Path.Data>
+        </Path>
+        <Path Stroke="Black" StrokeThickness="3" Fill="Black">
+            <Path.Data>
+                <LineGeometry StartPoint="20, 20" EndPoint="37, 3" />
+            </Path.Data>
+        </Path>
+        <Path Stroke="Black" StrokeThickness="3" Fill="Black">
+            <Path.Data>
+                <LineGeometry StartPoint="20, 30" EndPoint="37, 47" />
+            </Path.Data>
+        </Path>
+        <!--<Path Stroke="Black" StrokeThickness="0" Fill="Black">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure StartPoint="20,20.3" IsClosed="True">
+                        <LineSegment Point="30,5" />
+                        <LineSegment Point="36.5,15" />
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>-->
+        <Path Stroke="Black" StrokeThickness="0" Fill="Red">
+            <Path.Data>
+                <EllipseGeometry Center="0,25" RadiusX="1.5" RadiusY="1.5"/>
+            </Path.Data>
+        </Path>
+        <Path Stroke="Black" StrokeThickness="0" Fill="Red">
+            <Path.Data>
+                <EllipseGeometry Center="40,45" RadiusX="1.5" RadiusY="1.5"/>
+            </Path.Data>
+        </Path>
+        <Path Stroke="Black" StrokeThickness="0" Fill="Red">
+            <Path.Data>
+                <EllipseGeometry Center="37,3" RadiusX="1.5" RadiusY="1.5"/>
+            </Path.Data>
+        </Path>
+    </Grid>
+</UserControl>
