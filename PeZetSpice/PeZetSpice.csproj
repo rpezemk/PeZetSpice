@@ -13,4 +13,14 @@
     <PackageReference Include="SpiceSharpBehavioral" Version="3.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BasicHelpers\BasicHelpers.csproj" />
+    <ProjectReference Include="..\BasicWpfHelpers\BasicWpfHelpers.csproj" />
+    <ProjectReference Include="..\SchematicSymbols\SchematicSymbols.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+
 </Project>

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace SchematicSymbols.Symbols
 {
     /// <summary>
-    /// Interaction logic for Transistor.xaml
+    /// Interaction logic for MmBackground.xaml
     /// </summary>
-    public partial class Transistor : UserControl
+    public partial class MmBackground : UserControl
     {
-        public Transistor()
+        public MmBackground()
         {
             InitializeComponent();
         }

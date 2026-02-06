@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using BasicWpfHelpers;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -35,7 +36,8 @@ namespace PeZetSpice
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            isPanning = true;
+            if (MouseHelper.Only.Middle())
+                isPanning = true;
         }
 
         private void Window_MouseUp(object sender, MouseButtonEventArgs e)
@@ -45,12 +47,11 @@ namespace PeZetSpice
 
         private void Window_MouseLeave(object sender, MouseEventArgs e)
         {
-            // isPanning = false;
         }
 
         private void Window_MouseMove(object sender, MouseEventArgs e)
         {
-            if(!Mouse.LeftButton.Equals(MouseButtonState.Pressed))
+            if(!MouseHelper.Only.Middle())
                 isPanning = false;
             
             if (isPanning)

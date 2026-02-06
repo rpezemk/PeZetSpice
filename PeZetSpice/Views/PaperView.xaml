@@ -4,9 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PeZetSpice.Views"
+             xmlns:symbols="clr-namespace:SchematicSymbols.Symbols;assembly=SchematicSymbols"
              mc:Ignorable="d" 
-             Width="488" Height="488"
-             SizeChanged="UserControl_SizeChanged">
+             Width="488" Height="300"
+             SizeChanged="UserControl_SizeChanged"
+             Background="#BBBBBB">
     <Border x:Name="PaperBorder" BorderThickness="1" BorderBrush="#880088FF">
         <Grid Margin="-5, -5, -5, -5">
             <Grid.ColumnDefinitions>
@@ -118,6 +120,9 @@
                     </DrawingBrush>
                 </Grid.Background>
             </Grid>
+            <Canvas Grid.Row="1" Grid.Column="1">
+                <symbols:BJT Canvas.Left="70" Canvas.Top="100"/>
+            </Canvas>
         </Grid>
     </Border>
 </UserControl>
