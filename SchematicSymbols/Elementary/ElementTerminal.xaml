@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="SchematicSymbols.Elementary.ElementTerminal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SchematicSymbols.Elementary"
+             mc:Ignorable="d" 
+             >
+    <Grid>
+        <Path Stroke="Black" StrokeThickness="0" Fill="Red">
+            <Path.Data>
+                <EllipseGeometry RadiusX="1.5" RadiusY="1.5"/>
+            </Path.Data>
+        </Path>
+    </Grid>
+</UserControl>

@@ -4,76 +4,98 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SchematicSymbols.Symbols"
+             xmlns:elem="clr-namespace:SchematicSymbols.Elementary"
+             xmlns:mvvm="clr-namespace:SchematicSymbols.MVVM"
              mc:Ignorable="d" 
-             Width="25" Height="25">
-    <Border BorderBrush="Red" BorderThickness="1" Margin="-1">
-        <Grid>
-            <Grid.LayoutTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX=".5" ScaleY=".5"/>
-                </TransformGroup>
-            </Grid.LayoutTransform>
-            <!--<local:MmBackground></local:MmBackground>-->
-            <Path Stroke="Black" StrokeThickness="1" Fill="Transparent">
-                <Path.Data>
-                    <EllipseGeometry Center="25,25" RadiusX="25" RadiusY="25"/>
-                </Path.Data>
-            </Path>
-            <Path Stroke="Black" StrokeThickness="0" Fill="Black">
-                <Path.Data>
-                    <RectangleGeometry Rect="17,7,5,36"/>
-                </Path.Data>
-            </Path>
-            <Path Stroke="Black" StrokeThickness="3" Fill="Black">
-                <Path.Data>
-                    <LineGeometry StartPoint="0, 25" EndPoint="20, 25" />
-                </Path.Data>
-            </Path>
-            <Path Stroke="Black" StrokeThickness="3" Fill="Black">
-                <Path.Data>
-                    <LineGeometry StartPoint="20, 25" EndPoint="40, 5" />
-                </Path.Data>
-            </Path>
-            <Path Stroke="Black" StrokeThickness="3" Fill="Black">
-                <Path.Data>
-                    <LineGeometry StartPoint="20, 25" EndPoint="40, 45" />
-                </Path.Data>
-            </Path>
-            <!--<Path Stroke="Black" StrokeThickness="0" Fill="Black">
-            <Path.Data>
-                <PathGeometry>
-                    <PathFigure StartPoint="20,25" IsClosed="True">
-                        <LineSegment Point="32,43" />
-                        <LineSegment Point="38,37" />
-                    </PathFigure>
-                </PathGeometry>
-            </Path.Data>
-        </Path>-->
-            <Path Stroke="Black" StrokeThickness="0" Fill="Black">
-                <Path.Data>
-                    <PathGeometry>
-                        <PathFigure StartPoint="40,45" IsClosed="True">
-                            <LineSegment Point="23,34" />
-                            <LineSegment Point="29,28" />
-                        </PathFigure>
-                    </PathGeometry>
-                </Path.Data>
-            </Path>
-            <Path Stroke="Black" StrokeThickness="0" Fill="Red">
-                <Path.Data>
-                    <EllipseGeometry Center="0,25" RadiusX="1.5" RadiusY="1.5"/>
-                </Path.Data>
-            </Path>
-            <Path Stroke="Black" StrokeThickness="0" Fill="Red">
-                <Path.Data>
-                    <EllipseGeometry Center="40,45" RadiusX="1.5" RadiusY="1.5"/>
-                </Path.Data>
-            </Path>
-            <Path Stroke="Black" StrokeThickness="0" Fill="Red">
-                <Path.Data>
-                    <EllipseGeometry Center="40,5" RadiusX="1.5" RadiusY="1.5"/>
-                </Path.Data>
-            </Path>
-        </Grid>
-    </Border>
+             Width="25" Height="25"
+             x:Name="BJT_ROOT"
+             Loaded="BJT_ROOT_Loaded" ClipToBounds="False" RenderTransformOrigin="0.5, 0.5">
+    <UserControl.DataContext>
+        <mvvm:BJT_VM />
+    </UserControl.DataContext>
+    <elem:BasicSymbol>
+        <elem:BasicSymbol.InnerContent>
+
+            <Border BorderBrush="Transparent" BorderThickness="1" Margin="-1">
+                <Grid>
+                    <Grid.LayoutTransform>
+                        <ScaleTransform ScaleX="0.5" ScaleY="0.5"/>
+                    </Grid.LayoutTransform>
+                    
+                    <Grid>
+                        <elem:ElementTerminal Margin="0,25,0,0" TerminalNo="1" TerminalName="Base"/>
+                        <elem:ElementTerminal Margin="40,5,0,0" TerminalNo="2" TerminalName="Collector"/>
+                        <elem:ElementTerminal Margin="40,45,0,0" TerminalNo="3" TerminalName="Emitter"/>
+                    </Grid>
+                    
+                    <Grid>
+                        <!--<local:MmBackground></local:MmBackground>-->
+                        <Path Stroke="Black" StrokeThickness="1" Fill="Transparent">
+                            <Path.Data>
+                                <EllipseGeometry Center="25,25" RadiusX="25" RadiusY="25"/>
+                            </Path.Data>
+                        </Path>
+                        <Path Stroke="Black" StrokeThickness="0" Fill="Black">
+                            <Path.Data>
+                                <RectangleGeometry Rect="17,7,5,36"/>
+                            </Path.Data>
+                        </Path>
+                        <Path Stroke="Black" StrokeThickness="3" Fill="Black">
+                            <Path.Data>
+                                <LineGeometry StartPoint="0, 25" EndPoint="20, 25" />
+                            </Path.Data>
+                        </Path>
+                        <Path Stroke="Black" StrokeThickness="3" Fill="Black">
+                            <Path.Data>
+                                <LineGeometry StartPoint="20, 25" EndPoint="40, 5" />
+                            </Path.Data>
+                        </Path>
+                        <Path Stroke="Black" StrokeThickness="3" Fill="Black">
+                            <Path.Data>
+                                <LineGeometry StartPoint="20, 25" EndPoint="40, 45" />
+                            </Path.Data>
+                        </Path>
+                        <Path Stroke="Black" StrokeThickness="0" Fill="Black">
+                            <Path.Style>
+                                <Style TargetType="Path">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Polarity}" Value="{x:Static elem:BJT_Polarity.PNP}">
+                                            <Setter Property="Visibility" Value="Hidden"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Path.Style>
+                            <Path.Data>
+                                <PathGeometry>
+                                    <PathFigure StartPoint="20,25" IsClosed="True">
+                                        <LineSegment Point="32,43" />
+                                        <LineSegment Point="38,37" />
+                                    </PathFigure>
+                                </PathGeometry>
+                            </Path.Data>
+                        </Path>
+                        <Path Stroke="Black" StrokeThickness="0" Fill="Black">
+                            <Path.Style>
+                                <Style TargetType="Path">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Polarity}" Value="{x:Static elem:BJT_Polarity.NPN}">
+                                            <Setter Property="Visibility" Value="Hidden"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Path.Style>
+                            <Path.Data>
+                                <PathGeometry>
+                                    <PathFigure StartPoint="40,45" IsClosed="True">
+                                        <LineSegment Point="23,34" />
+                                        <LineSegment Point="29,28" />
+                                    </PathFigure>
+                                </PathGeometry>
+                            </Path.Data>
+                        </Path>
+                    </Grid>
+                </Grid>
+            </Border>
+        </elem:BasicSymbol.InnerContent>
+    </elem:BasicSymbol>
 </UserControl>

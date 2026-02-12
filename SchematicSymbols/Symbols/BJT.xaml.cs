@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchematicSymbols.Elementary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,11 @@ namespace SchematicSymbols.Symbols
         public BJT()
         {
             InitializeComponent();
+        }
+
+        private void BJT_ROOT_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
